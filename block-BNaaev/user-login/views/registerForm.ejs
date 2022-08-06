@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <title>Register User</title>
+  </head>
+  <body class="center">
+    <header class="flex">
+      <div class="flex-50 left">
+        <a href="/" class="logo">Home</a>
+      </div>
+      <div class="flex-50 right">
+        <a href="/" class="btn">Back</a>
+      </div>
+    </header>
+    <h1>Register User</h1>
+    <form action="/users" method="POST" class="form">
+      <input type="text" name="name" placeholder="Name" class="form-control" />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        class="form-control"
+      />
+      <input
+        type="text"
+        name="password"
+        placeholder="Password"
+        class="form-control"
+      />
+      <input type="number" name="age" placeholder="Age" class="form-control" />
+      <input
+        type="number"
+        name="phone"
+        placeholder="Phone No."
+        class="form-control"
+      />
+      <input type="submit" value="Submit" class="btn btn2" />
+    </form>
+  </body>
+</html>
