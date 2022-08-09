@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <title>Article Form</title>
+  </head>
+  <body class="center">
+    <header class="flex">
+      <div class="flex-50 left">
+        <a href="/" class="logo">Home</a>
+      </div>
+      <div class="flex-50 right">
+        <a href="/articles" class="btn">Back</a>
+      </div>
+    </header>
+    <section class="container center">
+      <h1>Article Form</h1>
+      <form action="/articles" method="POST" class="form">
+        <input
+          type="text"
+          name="title"
+          placeholder="Title"
+          class="form-control"
+        />
+        <textarea
+          name="description"
+          rows="6"
+          placeholder="Description"
+          class="form-control"
+        ></textarea>
+        <input
+          type="text"
+          name="author"
+          placeholder="Author"
+          class="form-control"
+        />
+        <input type="submit" value="Submit" class="btn btn2" />
+      </form>
+    </section>
+  </body>
+</html>
