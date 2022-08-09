@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <title>Register Admin</title>
+  </head>
+  <body class="center">
+    <header class="flex">
+      <div class="flex-50 left">
+        <a href="/" class="logo">Home</a>
+      </div>
+      <div class="flex-50 right">
+        <a href="/admin" class="btn">Back</a>
+      </div>
+    </header>
+    <h1>Register Admin</h1>
+    <form action="/admin/register" method="POST" class="form">
+      <% if(error) { %>
+      <p><%= error %></p>
+      <% } %>
+      <input type="text" name="name" placeholder="Name" class="form-control" />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        class="form-control"
+      />
+      <input
+        type="text"
+        name="password"
+        placeholder="Password"
+        class="form-control"
+      />
+      <input type="text" name="city" placeholder="City" class="form-control" />
+      <input type="submit" value="Register" class="btn btn2" />
+    </form>
+  </body>
+</html>
