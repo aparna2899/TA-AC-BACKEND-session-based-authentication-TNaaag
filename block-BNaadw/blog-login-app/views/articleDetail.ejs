@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <title>Article Detail</title>
+  </head>
+  <body>
+    <header class="flex">
+      <div class="flex-50 left">
+        <a href="/" class="logo">Home</a>
+      </div>
+      <div class="flex-50 right">
+        <a href="/articles" class="btn">Back</a>
+      </div>
+    </header>
+    <div class="container">
+      <h2><%= article.title %></h2>
+      <h3><%= article.author %></h3>
+      <p><%= article.description %></p>
+
+      <div class="flex">
+        <a href="/articles/<%= article.slug %>/edit" class="btn btn2">Edit</a>
+        <a href="/articles/<%= article.slug %>/delete" class="btn btn2"
+          >Delete</a
+        >
+      </div>
+      <form action="/articles/<%= article.slug %>/comments" method="POST">
+        <textarea
+          name="content"
+          rows="4"
+          cols="30"
+          placeholder="Write your comment here.."
+          class="comment-box"
+        ></textarea>
+        <input
+          type="text"
+          name="author"
+          placeholder="Name"
+          class="comment-box"
+        />
+        <input type="submit" value="Add Comment" class="btn btn2" />
+      </form>
+      <hr />
+      <h3>Comments</h3>
+      <% article.comments.forEach(comment => { %>
+      <div class="comment-list">
+        <strong><%= comment.author %> :</strong>
+        <span><%= comment.content %></span>
+        <a href="/comments/<%= comment.id %>/edit" class="btn btn3">Edit</a>
+        <a href="/comments/<%= comment.id %>/delete" class="btn btn3">Delete</a>
+      </div>
+      <% }) %>
+    </div>
+  </body>
+</html>
